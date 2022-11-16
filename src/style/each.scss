@@ -1,0 +1,28 @@
+//each method for arrays
+$sizes : 1,
+2,
+3,
+4,
+5,
+6;
+
+//each method with key value pair
+$spaces : (1:10px,
+    2:20px,
+    3:30px,
+    4:40px,
+    5:50px,
+    6:60px);
+
+@each $size in $sizes {
+    .header-#{$size} {
+        font-size: $size * 1em;
+    }
+}
+
+@each $key,
+$value in $spaces {
+    .letter-spacing-#{$key} {
+        letter-spacing: $value;
+    }
+}

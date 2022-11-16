@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./style/map-get.scss";
 import "./style/nesting.scss";
 import "./style/mixin.scss";
 import "./style/function.scss";
 import "./style/extend.scss";
 import "./style/if-else.scss";
+import "./style/each.scss";
+import "./style/for-while.scss";
 
 
 const App: React.FC = () => {
@@ -49,9 +51,25 @@ const App: React.FC = () => {
       <div className="warning">warning message</div> */}
 
       {/* If-else scss example  */}
-      <div className="profile">&#9728;</div>
+      {/* <div className="profile">&#9728;</div>
       <div className="profile">&#9738;</div>
-      <div className="profile">&#9828;</div>
+      <div className="profile">&#9828;</div> */}
+
+      {/* each usage scss */}
+      {/* <div className="header-1 letter-spacing-1">Apple</div>
+      <div className="header-2 letter-spacing-2">Melon</div>
+      <div className="header-3 letter-spacing-3">Watermelon</div>
+      <div className="header-4 letter-spacing-4">Banana</div>
+      <div className="header-5 letter-spacing-5">Berry</div>
+      <div className="header-6 letter-spacing-6">Peach</div> */}
+
+      {/* for while loop in scss */}
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+        <div className={`box-${item}`}>Item {item}</div>
+      ))}
+
+
+
 
     </div>
   );
