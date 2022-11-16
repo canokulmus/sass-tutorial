@@ -1,0 +1,21 @@
+//if-else example
+
+@mixin icon($size, $isCircle) {
+    width: $size;
+    height: $size;
+
+    @if ($isCircle) {
+        border-radius: 50%;
+    }
+}
+
+.profile {
+    float: left;
+    background-color: purple;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    @include icon(50px, true);
+}

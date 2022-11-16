@@ -1,0 +1,27 @@
+//import variables
+
+@import "variables";
+
+$renk: purple;
+$boyut: 100px;
+$birimsizBoyut: 100;
+
+.demo {
+    background-color: $renk;
+    line-height: $boyut;
+    font-size: $birimsizBoyut/3 + px; //veya #{$birimsizBoyut/3}px; veya #{$birimsizBoyut/3} + px;
+    width: $birimsizBoyut*3 + px; //veya #{$birimsizBoyut*3}px; veya #{$birimsizBoyut*3} + px;
+}
+
+.myClass {
+    $renk2: blue;
+    color: $renk2;
+    font-family: $font2;
+}
+
+
+//change the value of a variable locally
+// .myClass {
+//     $renk: red !global; // !global if you want to change the value of a variable globally
+//     color: $renk;
+// }

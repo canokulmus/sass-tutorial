@@ -1,0 +1,38 @@
+//mixin examples
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//size
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin padding1vs2($yatay, $dikey) {
+    //
+    padding: $dikey $yatay $dikey $yatay ;
+
+}
+
+@mixin renk ($color, $background-color) {
+    color: $color;
+    background-color: $background-color;
+
+    //hover for container of renk mixin
+    &:hover {
+        color: $background-color;
+        background-color: $color;
+    }
+}
+
+.card2 {
+    @include renk(yellow, purple);
+    @include border-radius(10px);
+    @include padding1vs2(50px, 25px); // manual ordering is possible
+    @include size(200px, 200px);
+}

@@ -1,0 +1,41 @@
+$colors: (
+    red: #f00,
+    green: #0f0,
+    blue: #00f,
+    orange: #f60,
+);
+
+.card {
+    background-color: rgb(225, 209, 209);
+    padding: 25px;
+
+    .card-title {
+        color: map-get($colors, red);
+    }
+
+    .card-text {
+        color: map-get($colors, blue);
+        ;
+    }
+
+    ul.list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: map-get($colors, orange);
+            }
+        }
+    }
+
+}

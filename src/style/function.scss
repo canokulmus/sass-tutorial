@@ -1,0 +1,78 @@
+//function examples 
+
+@function tema($tur: null) {
+    @if $tur =="açık" {
+        @return #fff;
+    }
+
+    @else if $tur =="koyu" {
+        @return #000;
+    }
+
+    @else if $tur =="mavi" {
+        @return #069ecc;
+    }
+
+    @else {
+        //default
+        @return #fff;
+    }
+}
+
+@function pixelToRem($px) {
+    @return $px / 16px * 1rem;
+}
+
+//grid system function
+@function grid($column, $total) {
+    @return ($column / $total) * 100%;
+}
+
+.card3 {
+    background-color: tema("mavi"); //if wrong value is given or no value is given, default value will be used
+    width: 600px;
+    margin: 0 auto;
+    font-size: pixelToRem(24px);
+    text-align: center;
+
+    div {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .first {
+        float: left;
+        background-color: orange;
+        width: grid(2, 12);
+    }
+
+    .second {
+        float: left;
+        background-color: green;
+        width: grid(4, 12);
+    }
+
+    .third {
+        float: left;
+        background-color: blue;
+        width: grid(6, 12);
+    }
+
+    .x {
+        float: left;
+        background-color: pink;
+        width: grid(4, 12);
+    }
+
+    .y {
+        float: left;
+        background-color: purple;
+        width: grid(8, 12);
+    }
+
+
+}

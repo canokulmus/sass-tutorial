@@ -1,0 +1,22 @@
+$renk : ("kirmizi": #f00,
+    "yesil": #0f0,
+    "mavi": #00f,
+    "sari": #ff0,
+    "turuncu": #f60,
+);
+
+$boyut : ("kucuk": 10px,
+    "orta": 15px,
+    "buyuk": 20px,
+);
+
+$fontType : ("sans-serif": "Arial, Helvetica, sans-serif",
+    "serif": "Georgia, Times New Roman, serif",
+    "monospace": "Courier New, Courier, monospace",
+);
+
+.ex-map-get {
+    color: map-get($renk, "kirmizi");
+    background-color: map-get($renk, "mavi");
+    padding: map-get($boyut, "orta");
+}
